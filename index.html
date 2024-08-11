@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আপনার সমস্যা লিখুন</title>
+    <style>
+        body {
+            background-color: #f7f8fa;
+            color: #333;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #444;
+            font-size: 28px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+          
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 16px;
+        }
+        
+        .large {
+    height: 200px; 
+}
+.name {
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 48px; /* Font size */
+    color: #333; /* Text color */
+    text-align: center; /* Center alignment */
+    margin: 20px 0; /* Margin above and below */
+    font-weight: bold; /* Make text bold */
+    text-shadow: 3px 10px 8px rgba(0, 0, 0, 0.3), /* Primary shadow */
+                 -1px -1px 2px rgba(255, 255, 255, 0.6); /* Secondary shadow */
+}
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #00adb5;
+        }
+
+        input[type="submit"] {
+            background-color: #00adb5;
+            color: #ffffff;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #007b7f;
+        }
+
+        @media (max-width: 500px) {
+            form {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            input[type="text"],
+            textarea {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            input[type="submit"] {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="name">PixelPlaza</h2>
+        <form action="submit_problem.php" method="post">
+            <label for="name">আপনার নাম:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="problem">আপনাকে কিভাবে সাহায্য করতে পারি:</label>
+            <textarea id="problem" name="problem" class="large" required></textarea>
+            
+            <label for="contact">আপনার সাথে যোগাযোগের ঠিকানা (Email বা WhatsApp নাম্বার):</label>
+            <input type="text" id="contact" name="contact" required>
+            	
+            
+            <label for="last2">Number: 01903840261 (Bkash or Nagad)<br><br>
+যে নাম্বার থেকে 10 টাকা পাঠিয়েছেন তার শেষ দুই ডিজিট:</label>
+            <input type="text" id="last2" name="last2" required>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
